@@ -3,7 +3,7 @@ extends layout
 block content
     div(style = 'margin: 5px')
         h3 add travelItem
-        form(action='/travelItem/add', method='get')
+        form(action='/travelItem/insert', method='get')
             p travelId
                 input(type='text', name='travelId')
             p label
@@ -29,13 +29,13 @@ block content
             input(type='submit')
             
         h3 query travelItems by travel id
-        form(action='/travelItem/queryAll', method='get')
+        form(action='/travelItem/query', method='get')
             p travel id
                 input(type='text', name='travelId')
             input(type='submit')
             
         h3 query nearby travelItems
-        form(action='/travelItem/queryNearby', method='get')
+        form(action='/travelItem/query', method='get')
             p locationLat lower bound
                 input(type='text', name='locationLatLowerBound')
             p locationLat upper bound
@@ -56,8 +56,6 @@ block content
         form(action='/travelItem/update', method='get')
             p id
                 input(type='text', name='id')
-            p travelId
-                input(type='text', name='travelId')
             p label
                 input(type='text', name='label')
             p time
@@ -78,5 +76,5 @@ block content
         form(action='/upload', enctype='multipart/form-data', method='post')
             p file
                 input(type='file' name='file')
-            input(type='submit') 
+            input(type='submit')
     

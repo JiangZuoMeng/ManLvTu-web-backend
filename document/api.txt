@@ -1,0 +1,33 @@
+user:
+    /query:
+        id
+        username & password
+    /remove:
+        id
+    /update:
+        id & username
+        id & password
+    /insert
+        username & password
+
+travel:
+    /query:
+        userId
+    /remove:
+        id
+    /update
+        id & name
+    /insert
+        userId & name
+
+travelItem:
+    /query:
+        travelId
+        id
+        locationLatLowerBound & locationLatUpperBound & locationLngLowerBound & locationLngUpperBound
+    /remove:
+        id
+    /update:
+        id & [columns]
+    /insert:
+        travelId & [columns]

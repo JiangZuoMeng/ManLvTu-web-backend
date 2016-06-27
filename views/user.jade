@@ -2,13 +2,13 @@ extends layout
 
 block content
     h1 register
-    form(action='/user/register', method='get')
+    form(action='/user/insert', method='get')
         input(type='text', name='username')
         input(type='text', name='password')
         input(type='submit')
 
     h1 login
-    form(action='/user/login', method='get')
+    form(action='/user/query', method='get')
         input(type='text', name='username')
         input(type='text', name='password')
         input(type='submit')
@@ -18,8 +18,8 @@ block content
         input(type='text', name='id')
         input(type='submit')
     
-    h1 query all by username
-    form(action='/user/queryAll', method='get')
+    h1 query by username
+    form(action='/user/query', method='get')
         input(type='text', name='username')
         input(type='submit')
 
